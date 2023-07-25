@@ -1,5 +1,5 @@
 {
-  "name": "cloak-content-utils",
+  "name": "cloak-data-utils",
   "description": "Collection of TypeScript modules for accessing and modifying Cloak's content folder.",
   "version": "0.0.0",
   "license": "MIT",
