@@ -1,4 +1,4 @@
-import { Content, parseContent } from "./ContentSchema.js";
+import { Content, parseContent } from "./ContentSchema";
 
 /**
  * Stringify the content JSON with nicer formatting.

@@ -1,10 +1,10 @@
-import { reloadImages } from "./ImagesFolder.js";
-import { readContent } from "./ContentFile.js";
-import { Content } from "./ContentSchema.js";
+import { reloadImages } from "./ImagesFolder";
+import { readContent } from "./ContentFile";
+import { Content } from "./ContentSchema";
 
 /**
  * Read the content folder, accessing the content and images.
- * @param success Success callback recieving the content and images.
+ * @param success Success callback recieving the file system handles, content and images.
  * @param error Error callback recieving a string describing the error.
  */
 export async function readContentFolder(success: (folder: FileSystemDirectoryHandle, file: FileSystemFileHandle, content: Content, images: Map<string, HTMLImageElement>) => void, error: (message: string) => void): Promise<void> {
@@ -33,7 +33,7 @@ export async function readContentFolder(success: (folder: FileSystemDirectoryHan
   // Attempt to parse the content file
 
   let content: Content;
-  let errors = [];
+  let errors: string[] = [];
 
   try {
     content = await readContent(file, errors, "\n  in " + file.name);

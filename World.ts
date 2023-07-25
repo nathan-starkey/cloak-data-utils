@@ -1,4 +1,4 @@
-import { World, Chunk } from "./ContentSchema.js";
+import { World, Chunk } from "./ContentSchema";
 
 export const CHUNK_WIDTH = 32;
 

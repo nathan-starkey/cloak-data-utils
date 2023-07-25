@@ -1,4 +1,4 @@
-import { Content, Creature, Image, Sprite, Tile, World } from "./ContentSchema.js";
+import { Content, Creature, Image, Sprite, Tile, World } from "./ContentSchema";
 
 /**
  * Find the index of a creature in the content.
