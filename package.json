@@ -1,7 +1,7 @@
 {
   "name": "cloak-data-utils",
   "description": "Collection of TypeScript modules for accessing and modifying Cloak's content folder.",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "dependencies": {
     "@types/wicg-file-system-access": "^2020.9.6"

@@ -7,7 +7,7 @@ import { Content } from "./ContentSchema.js";
  * @param success Success callback recieving the content and images.
  * @param error Error callback recieving a string describing the error.
  */
-export async function readContentFolder(success: (content: Content, images: Map<string, HTMLImageElement>) => void, error: (message: string) => void): Promise<void> {
+export async function readContentFolder(success: (folder: FileSystemDirectoryHandle, file: FileSystemFileHandle, content: Content, images: Map<string, HTMLImageElement>) => void, error: (message: string) => void): Promise<void> {
   // Attempt to access the content folder
 
   let folder: FileSystemDirectoryHandle;
@@ -64,5 +64,5 @@ export async function readContentFolder(success: (content: Content, images: Map<
     return;
   }
 
-  success(content, images);
+  success(folder, file, content, images);
 }
